@@ -22,11 +22,11 @@
 				<div id="wrapper">
 						<nav id="nav">
 							<ul>
-								<li><a href="#intro"> Roster </a></li>
-								<li><a href="#first">  Vehicle Manning </a></li>
-								<li><a href="#second"> Personnel Info </a></li>
-								<li><a href="#roster"> Programmes Used </a></li>
-								<li><a href="#cta"> Our Codes </a></li>
+								<li><a href="#calendar"> Calendar View </a></li>
+								<li><a href="#roster"> Roster Dashboard </a></li>
+								<li><a href="#callSign"> Call Sign View </a></li>
+								<li><a href="#personnel"> Personnel View </a></li>
+								<li><a href="#codes"> Programmes Used and Our Codes </a></li>
 							</ul>
 						</nav>
 
@@ -59,7 +59,6 @@
 					</ul>
 				</nav>
 
-
 				<!-- Main -->
 					<div id="main">
 
@@ -71,54 +70,68 @@
 									</header>
 									<p> This platform aims to free up time for those holding the roster in charge as a secondary appointment. </p>
 
-<form>
+<form action="action.php" method="post">
 	<ul>
-  <li><label for="datemax">Enter a date before August 2020:</label>
-  <input type="date" id="datemax" name="datemax" max="2020-07-31"> &nbsp; &nbsp;
-  <label for="datemin">Enter a date after August 2020:</label> </li> &nbsp; &nbsp;
-  <input type="date" id="datemin" name="datemin" min="2020-08-01">
-<h4>Call sign:</h4>		<select id="callSign" name="callSign" style="width: 50px;">
-<option value="a111">A111</option>
-<option value="a112">A112</option>
-<option value="pl111">PL111</option>
-<option value="fb111">FB111</option>
+  <h4>Choose a Date to edit: </h4> &nbsp; &nbsp;
+  <input type="date" id="datemin" name="datef" min="2020-06-12">
+</ul>
+
+
+<ul>
+<h4>Shift type</h4>		<select id="am/pm" name="shiftHours" style="width: 300px;">
+<option value="24 hours- 0730 hours to 0730 hours">24 hours</option>
+<option value="Day shift- 0730 hours to 2000 hours">AM</option>
+<option value="Night shift- 1930 hours to 0800 hours">PM </option>
+<option value="Office hours- 0730 hours to 1730 hours">Office hours</option>
 </select>
+</ul>
+
+<ul>
+<h4>Call sign of Appliance:</h4>		<select id="callSign" name="callSign" style="width: 200px;">
+<option value="Alpha 111">A111</option>
+<option value="Alpha 112">A112</option>
+<option value="Pump Ladder 111">PL111</option>
+<option value="Fire-Medical Vehicle 111">FMV111</option>
+<option value="Fire Bike 111">FB111</option>
+<option value="Combined Platform Ladder 111">CPL111</option>
+</select>
+</ul>
+
 <h4> A111 Paramedic </h4>
-<input list="a111">
-  <datalist id="a111" style="display: block">
+<input list="a111P" name="a111Paramedic">
+  <datalist id="a111P">
     <option value="Yao Hong Bin">
     <option value="Ho Li Fen Shirleen">
     <option value="Noraini">
     <option value="Shalini d/o Satan">
     <option value="Bobo Chan">
   </datalist>
-	<h4> A111 Driver </h4> <input list="a111">
-	  <datalist id="a111" style="display: block">
-	    <option value="Yao Hong Bin">
-	    <option value="Ho Li Fen Shirleen">
-	    <option value="Noraini">
-	    <option value="Shalini d/o Satan">
-	    <option value="Bobo Chan">
-	  </datalist>
-		<h4> A111 Medic </h4> <input list="a111">
-		  <datalist id="a111" style="display: block">
-		    <option value="Yao Hong Bin">
-		    <option value="Ho Li Fen Shirleen">
-		    <option value="Noraini">
-		    <option value="Shalini d/o Satan">
-		    <option value="Bobo Chan">
-		  </datalist>
-</p>
-<div class="wrapper">
-  <button class="">
-    <span>Submit</span>
-    <div class="success">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
 
-	<path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
- </svg>
+	<h4> A111 Driver </h4>
+  <input list="a111D" name="a111Driver">
+	  <datalist id="a111D">
+      <option value="Yazid Bin Abdullah">
+      <option value="Rashid Bin Kana">
+      <option value="Soh Leong Heng">
+      <option value="Adil">
+      <option value="Andy Ng">
+	  </datalist>
+
+		<h4> A111 Medic </h4>
+    <input list="a111M" name="a111Medic">
+		  <datalist id="a111M">
+		    <option value="Ang An-Sel">
+		    <option value="Bong Jia Hui">
+		    <option value="Deng Fei Fan">
+		    <option value="Marcus Chan Y J">
+		    <option value="Sam Mong Onn">
+		  </datalist>
+
+<br/><br/>
+<div class="wrapper">
+    <input type="submit" />
+    <div class="success">
       </div>
-  </button>
 </div>
 </form>
 								</div>
